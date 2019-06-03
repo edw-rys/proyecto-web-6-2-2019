@@ -1,0 +1,95 @@
+/*Navbar*/
+.navbar nav{
+	display: none;
+}
+.navbar nav.active{
+	display: block;
+}
+.navbar nav ul{
+	/*background: black;	*/
+	margin: 0;
+	padding: 0;
+}
+.navbar nav ul li{
+	position: relative;
+	text-align: center;
+	/*padding: 20px;*/
+	width: 100%;
+}
+.navbar nav ul ._menu{
+	background: var(--color-first);
+	transition: background 0.2s;
+}
+.navbar nav ul ._menu:hover{
+	background: var(--color-first-h);
+}
+.navbar nav ul li a, .navbar nav ul li span{
+	color: var(--color-txt);
+	width: 100%;	
+	display: block;
+	/*padding: 20px;*/
+	padding: 10px;
+	cursor: pointer;
+}
+
+.navbar nav ul li a::before{
+	content: '';
+	width: 5px;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: var(--color-first);
+	opacity: 0;
+	transition: all 0.5s; /*a que se le hace la transisión ,Tiempo de la trasicion*/
+}
+.navbar nav ul li:not(._menu) a:hover::before{
+	opacity: 1;
+}
+
+.navbar nav ul li:not(._menu){
+	background: var(--color-dark);
+}
+.navbar .menu .submenu{
+	display: none;
+}
+
+.navbar ._menu:hover > ul{
+	display: block;
+}
+
+/*menu btn*/
+.navigation .btn-menu,.navigation .logo{
+	display: inline-block;
+}
+.navigation .btn-menu{
+	cursor: pointer;
+	float: right;
+}
+.navigation .btn-menu i{
+	font-size: 2em;
+}
+@media(min-width:750px){
+	.navigation .btn-menu{
+		display: none;
+	}
+	.navigation{
+		/*diseño flexible*/
+		display: flex;
+		justify-content: space-between;
+	}
+	.navbar nav {
+		display: block;
+	}
+	.navbar nav .menu ._menu{
+		display: inline-block;
+	}
+	.navbar nav .menu li{
+		padding-right: 20px;
+		width: auto;
+	}
+	.navbar .submenu{
+		width: 100%;
+		position: absolute;
+	}
+}

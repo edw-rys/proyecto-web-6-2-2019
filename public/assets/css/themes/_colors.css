@@ -1,0 +1,11 @@
+:root{
+	--color: 				#00E36E;
+	--color-first: 			#00E36E;
+	--color-first-h:		#00C05D;
+	--color-dark:			#262A28;
+	--color-txt:			#000;
+}
+
+.font-white{
+	--color-txt:			#fff;
+}

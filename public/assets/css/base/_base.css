@@ -1,0 +1,59 @@
+*{
+	/*Margen y relleno en 0 para todos los elementos en el html*/
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+
+/*Listas*/
+/*Quitar Estilo definido de una lista*/
+.l-s-none{
+	list-style: none;
+}
+
+
+
+/*Texto*/
+/*Texto en Negrita*/
+.bold{
+	font-weight: bold;
+}
+/*texto centrado*/
+.txt-center{
+	text-align: center;
+}
+/*Decoración de texto: ninguno*/
+.txt-d-none{
+	text-decoration-color: none;
+}
+
+
+
+/*Contenedores*/
+/*centrar contenedor*/
+.center{
+	margin: auto;
+}
+/*Centrado absoluto*/
+.absolute-center,.center-absolute{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+/*espcio entre elementos*/
+.cont-space-flex{
+	/*diseño flexible*/
+	display: flex;
+	/*Espacio entre contenedores*/
+	justify-content: space-between;
+}
+
+
+
+
+.clearfix{
+	clear: both;
+}
