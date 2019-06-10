@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*colors*/
+:root{
+	--color-txt: 				#000;
+	--color-tittle: 			#000;
+}
+
+.txt-white{
+	--color-txt: 				#fff;
+	--color-tittle: 			#fff;
+}
+
+
+
+
+
+
+/*Text*/
+h1,h2,h3,h4,h5,h6,h1 span, h2 span, h3 span,span{
+	color: var(--color-tittle);
+}
+p,a,span,li,h1,h2,h3,h4,h5,h6,h1 {
+	font-family: var(--font-txt);
+}
+.bold{
+	font-weight: bold;
+}
+p,a,i,span,li{
+	color: var(--color-txt);
+}
+.txt-dc-none{
+	text-decoration: none;
+}
+.txt-center{
+	text-align: center;
+}
+.txt-upper{
+	text-transform: uppercase;
+}
+.underline{
+	text-decoration: underline;
+}
+
+
+a{
+	text-decoration: none;
+}
+.center{
+	margin: 0 auto;
+}
+.hidden{
+    display: none;
+}
+
+.clearfix{
+    clear: both;
+}
+
+
+.l-s-none{
+	list-style: none;
+}
+
+.abs-center,.center-abs{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%) 
+}
+
+.abs-top{
+	position: absolute;
+	top: 20px;
+}
+.abs-right{
+	position: absolute;
+	right: 20px;
+}
+.abs-botton{
+	position: absolute;
+	bottom: 20px;
+}
+.abs-left{
+	position: absolute;
+	left: 20px;
+}
+
+
+.flex-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
