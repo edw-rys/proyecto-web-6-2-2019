@@ -6,6 +6,7 @@
 :root{
 	--color-txt: 				#000;
 	--color-tittle: 			#000;
+	--color-active: 			#009817;
 }
 
 .txt-white{
@@ -45,9 +46,7 @@ p,a,i,span,li{
 }
 
 
-a{
-	text-decoration: none;
-}
+
 .center{
 	margin: 0 auto;
 }
@@ -95,3 +94,5 @@ a{
 	justify-content: center;
 	align-items: center;	
 }
+
+
