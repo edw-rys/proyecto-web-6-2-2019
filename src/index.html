@@ -4,133 +4,218 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
-	<title>Título</title>
+	<title>Home: Pitaisiers Grim Fruits</title>
 	<!-- Styles -->
 	<!-- bootstrap cdn-->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./assets/css/base.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
 
-	<style type="text/css">
+	<style >
 		a{
 			text-decoration: none;
 		}
 		a:hover{
 			text-decoration: none;
 		}
+		header{
+			height: 100vh;
+			background-image: url(assets/img/bck/home_bck_m.jpg);
+			
+			background-size: cover ;
+			background-repeat: no-repeat;
+		}
+		header ._content img{ 
+			width: 200px;
+		}
+		@media(min-width:750px){
+			header{
+				background-image: url(assets/img/bck/home_bck.jpg);
+			}
+		}
+
 	</style>
 	<!-- Icons -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
-	<!-- Scripts -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	
 </head>
 <body>
 	<div class="container-all">
 		<!-- header -->
-		<header class="container">
+		<header >
 			<div class="navigation">
-				<div class="isotipo flex-center"><h1 class="tittle"><a href="index.html">PITAISIERS GRIM FRUITS</a></h1></div>
-				<span id="menu-bars" class="hidden"><i class="fas fa-bars"></i></span>
-				<nav class="menu">
-					<ul class="l-s-none ">
+				<div class="flex space-btw">
+					<div class="isotipo flex-center"><h1 class="tittle"><a href="index.html">PITAISIERS GRIM FRUITS</a></h1>
+					</div>
+					<span id="menu-bars" class="hidden center-y" onclick="toggle('#menu','active')"><i class="fas fa-bars"></i></span>
+				</div>
+				
+				<nav id="menu" class="menu  font-p-h">
+					<ul class="l-s-none">
 						<li><a href="index.html">Inicio</a></li>
-						<li><a href="gallery.html">Galería de productos</a></li>
-						<li><a href="about.html">Acerca de</a></li>
+						<li><a href="about.html">¿Quiénes somos?</a></li>
+						<li><a href="gallery.html">Galería</a></li>
 					</ul>
 				</nav>
 			</div>
-			<div class="carousel-pitahaya">
-				<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators" style="right: 60%">
-						<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-						<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-						<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-					</ol>
-					<div class="carousel-inner">
-						<div class="carousel-item active">
-							<img src="assets/img/carousel/c1.jpg" class="d-block w-100" alt="pitahaya con fondo verde"/>
-							<div class="carousel-caption d-md-block">
-								<h2>First slide label</h2>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<img src="assets/img/carousel/c2.jpg" class="d-block w-100" alt="Plantaciones de pitahaya">
-							<div class="carousel-caption d-md-block">
-								<h2>Plantaciones de Pitahaya</h2>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<img src="assets/img/carousel/c3.jpg" class="d-block w-100" alt="pitahaya con fondo azul"/>
-							<div class="carousel-caption d-md-block">
-								<h2>Third slide label</h2>
-							</div>
-						</div>
-					</div>
-					<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					</a>
+			<div class="_content font-mali">
+				<div class="_product relative flex-center flex-y">
+					<h1 class="tittle abs-center">PITAISIERS</h1>
+					<img class="" src="assets/img/pictures/pitahaya__.png" alt="">
 				</div>
+				<div class="_description flex-center flex-y">
+					<h2 class="tittle">PITAHAYA</h2>
+					<p>Fruta del dragón</p>
+					<a class="button-1 btn-yellow txt-d-none" href="#!">Leer más</a>
+				</div>
+			</div>
+			<div class="social abs-botton abs-right">
+				<ul class="l-s-none flex list">
+					<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+					<li><i class="fab fa-instagram"></i></li>
+					<li><i class="fab fa-youtube"></i></li>
+				</ul>
 			</div>
 		</header>
 		<!-- main -->
 		<main>
-			<!-- <section class="section">
-				<h2 class="tittle">Checkpoints</h2>
-				<div class="cards">
-					<div class="card">
-						<img src="./assets/img/pictures/pitahaya.png" alt="">
-						<div class="description abs-botton abs-left">
-							<span>First</span>
-							<h3>Pitahaya</h3>
-						</div>
+			<section class="_s_product font-mali">
+				<div class="_content">
+					<div class="_head" style="margin-bottom: 40px">
+						<h2 class="txt-center">Nuestro Producto</h2>
 					</div>
-					<div class="card">
-						<img src="./assets/img/pictures/p2.jpg" alt="pitahaya"/>
-						<div class="description abs-botton abs-left">
-							<span>First</span>
-							<h3>Pitahaya</h3>
+					<div class="_product flex-center flex-y">
+						<div class="picture">
+							<img src="assets/img/pictures/p3.png" alt="">
+							<img src="assets/img/pictures/p_p.png" alt="">
 						</div>
-					</div>
-					<div class="card">
-						<img src="./assets/img/pictures/p2.jpg" alt="">
-						<div class="description abs-botton abs-left">
-							<span>First</span>
-							<h3>Pitahaya</h3>
-						</div>
-					</div>
-					<div class="card">
-						<img src="./assets/img/pictures/pitahaya.png" alt="">
-						<div class="description abs-botton abs-left">
-							<span>First</span>
-							<h3>Pitahaya</h3>
-						</div>
-					</div>
-					<div class="card">
-						<img src="./assets/img/pictures/p2.jpg" alt="">
-						<div class="description abs-botton abs-left">
-							<span>First</span>
-							<h3>Pitahaya</h3>
+						<div class="_description">
+							<p>Pitahaya Amarilla</p>
 						</div>
 					</div>
 				</div>
-			</section> -->
-			<section class="review flex-center">
+				<div class="recipes">
+					<div class="recipe _card_2">
+						<div class="_head">
+							<h3 class="tittle txt-center">Smoothie Bowl de Pitahaya</h3>
+							<span class="txt-center">Para el verano, algo nutritivo y delicioso</span>
+						</div>
+						<div class="_body">
+							<img src="assets/img/recipes/smoothie-bowl-de-pitahaya.jpg" alt="">
+							<h4 class="tittle txt-center">Ingredientes</h4>
+							<ul class="ingredients">
+								<li><span>1 pitahaya</span></li>
+								<li>1 plátano</li>
+								<li>100gr de arándanos</li>
+								<li>50gr avena</li>
+							</ul>
+						</div>
+						<div class="_foot flex-end">
+							<a class="button-1 btn-yellow " href="https://cookpad.com/ec/recetas/7317112-smoothie-bowl-de-pitahaya" target="_blank">Ver Preparación</a>
+						</div>
+					</div>
+					<div class="recipe _card_2">
+						<div class="_head">
+							<h3 class="tittle txt-center">Ensalada de Pitahaya Blanca y Roja con Mandarina Chantilly!</h3>
+							<span class="txt-center">#RECETASNAVIDAD</span>
+						</div>
+						<div class="_body">
+							<img src="assets/img/recipes/ensalada-de-pitahaya-blanca-y-roja-con-mandarina-chantilly.jpg" alt="">
+							<h4 class="tittle txt-center">Ingredientes</h4>
+							<ul class="ingredients">
+								<li>1 pitahaya amarilla</li>
+								<li>1 mandarina</li>
+								<li>chantilly</li>
+								<li>opcional: crema de fresas</li>
+							</ul>
+						</div>
+						<div class="_foot flex-end">
+							<a class="button-1 btn-yellow " href="https://cookpad.com/ec/recetas/6726625-ensalada-de-pitahaya-blanca-y-roja-con-mandarina-chantilly" target="_blank">Ver Preparación</a>
+						</div>
+					</div>
+					<div class="recipe _card_2">
+						<div class="_head">
+							<h3 class="tittle txt-center">Pitahaya, manzana al vodka</h3>
+							<span class="txt-center">#Descubriendo los sabores del Mundial</span>
+						</div>
+						<div class="_body">
+							<img src="assets/img/recipes/pitahaya-manzana-al-vodka.jpg" alt="">
+							<h4 class="tittle txt-center">Ingredientes</h4>
+							<ul class="ingredients">
+								<li>1 pitahaya amarilla (bien madura)</li>
+								<li>100 ml vodka</li>
+								<li>11 cdt azúcar(morena, rubia)</li>
+								<li>1 manzana</li>
+								<li>Hojas (menta)</li>
+								<li>Cubitos de hielo</li>
+								<li>1/2 limón</li>
+							</ul>
+						</div>
+						<div class="_foot flex-end">
+							<a class="button-1 btn-yellow " href="https://cookpad.com/ec/recetas/5222732-pitahaya-manzana-al-vodka" target="_blank">Ver Preparación</a>
+						</div>
+						
+					</div>
+					<div class="recipe _card_2">
+							<div class="_head">
+								<h3 class="tittle txt-center">Picada de frutas</h3>
+							</div>
+							<div class="_body">
+								<img src="assets/img/recipes/picada-de-frutas.jpg" alt="">
+								<h4 class="tittle txt-center">Ingredientes</h4>
+								<ul class="ingredients">
+									<li>1 Pitaya amarilla</li>
+									<li>1 durazno</li>
+									<li>1 kiwi 🥝</li>
+									<li>1 mango</li>
+									<li>1 rebanada papaya</li>
+									<li>1 granadilla o maracuyá</li>
+									<li>6 fresas 🍓</li>
+									<li><b>al gusto</b> Miel de abejas</li>
+								</ul>
+							</div>
+							<div class="_foot flex-end">
+								<a class="button-1 btn-yellow " href="https://cookpad.com/ec/recetas/3873600-picada-de-frutas" target="_blank">Ver Preparación</a>
+							</div>
+						</div>
+						<div class="recipe _card_2">
+								<div class="_head">
+									<h3 class="tittle txt-center">POSTRE DE PITAHAYA Y MANGO</h3>
+									<span class="txt-center">Aquí os dejamos un postre más que saludable y delicioso para ti o para compartir. Sólo necesitas mango, pitaya, yogur, ganas de disfrutar.</span>
+								</div>
+								<div class="_body">
+									<img src="assets/img/recipes/postre-pitaya.png" alt="">
+									<h4 class="tittle txt-center">Ingredientes</h4>
+									<ul class="ingredients">
+										<li>1 Pitahaya amarilla</li>
+										<li>1 Pitaya roja</li>
+										<li>Mango</li>
+										<li>Yogur natural</li>
+									</ul>
+								</div>
+								<div class="_foot flex-end">
+									<a class="button-1 btn-yellow " href="https://exoticfruitbox.com/receta/postre-de-pitaya-y-mango/" target="_blank">Ver Preparación</a>
+								</div>
+							</div>
+				</div>
+				
+			</section>
+			
+			<section class="review flex-center font-flower">
 				<div class="container-review ">
 					<div class="description">
-						<h2 class="tittle">Review</h2>
-						<span class="locate"><i class="fas fa-map-marker-alt"></i> Localización</span>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat.</p>
+						<h2 class="tittle">¿Qué es?</h2>
+						<p>La pitahaya o también conocida como fruta del dragón es una fruta exótica que proviene de un tipo de captus y cuenta con una gran cantidad de beneficios para la salud.</p>
+						<h3>Beneficios</h3>
+						<ul >
+							<li>Incidencia sobre el extrés oxidativo y la rigidez aórtica en personas que sufren diabetes, previniendo trastornos que derivan de dicha enfermedad.</li>
+							<li>Reduce los riesgos de sufrir o desarrollar enfermedades cardiacas e hipertensiín arterial.</li>
+							<li>Las semillas de pitahaya contienen grasas del tipo Omega 3, ideales para combatir algunas enfermedades auto inmunes y también para prevenir la aparición de ciertos tipos de cáncer relacionados con los cambios hormonales.</li>
+							<li>Es excelente para hacer <b>digestiones rápidas</b></li>
+							<li class="hidden">Fuente: https://www.vix.com/es/imj/salud/5412/que-beneficios-tiene-la-pitahaya</li>
+						</ul>
 					</div>
 					<div class="picture_review">
 						<img src="assets/img/pictures/conjunto-ph.jpg" alt="pitahayas">
@@ -138,32 +223,52 @@
 					
 				</div>
 			</section>
-			<section class="location flex-center">
-				<div class="map">
-					<h2>Ubicación</h2>
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31904.429576218714!2d-77.98203021338188!3d-1.7041314236086065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d3d66727868667%3A0xb568d82dcb6f76fb!2sParque+Central+Palora!5e0!3m2!1ses!2sec!4v1560131310496!5m2!1ses!2sec" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
-				
-			</section>
+			
+			
+
+			
 		</main>
 		<!-- footer -->
-		<footer>
-			<div class="info ft">
-				<ul class="l-s-none">
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-				</ul>
+		<footer class="txt-white font-p-h">
+			<div class="ft container">
+				
+				<div class="info ft_">
+					<div class="_head">
+						<h2 class="tittle">Información</h2>
+					</div>
+					<div class="_body">
+						<ul class="l-s-none">
+							<li>Ecuador</li>
+							<li>Amazonía</li>
+							<li><a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x91d3d61eb0d4219d:0x4dc0be7af92197d0?utm_source=mstt_1" target="_blank">Palora</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="contact ft_">
+					<div class="_head"><h2 class="tittle">Enviar consulta</h2></div>
+					<div class="_body">
+						<form class="flex-y center" method="get" accept-charset="utf-8">
+							<input type="text" name="name" placeholder="Su nombre" required/>
+							<input type="email" name="email" placeholder="su email" required/>
+							<textarea name="query" id="query" cols="30" rows="4" placeholder="Escriba su mensaje."></textarea>
+							<input class="button-1 btn-green" type="submit">
+						</form>
+					</div>
+				</div>
+				<div class="ft_">
+					<div class="_head"><h2 class="tittle">Contacto</h2></div>
+					<div class="_body">
+						<ul class="l-s-none">
+							<li>Correo: <a href="mailto:tnte.idrovo@gmail.com">tnte.idrovo@gmail.com</a></li>
+							<li>Número de celular: +593 98 897 3098</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-			<div class="social ft">
-				<ul class="l-s-none">
-					<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-					<li><i class="fab fa-instagram"></i></li>
-					<li><i class="fab fa-youtube"></i></li>
-				</ul>
-			</div>
+			
 		</footer>
+		<a href="#!" onclick="window.scrollTo(0,0);" class="btn-up"><i class="fas fa-chevron-up"></i></a>
 	</div>
+	<script src="assets/js/index.js"></script>
 </body>
 </html>

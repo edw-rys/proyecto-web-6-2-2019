@@ -2,28 +2,66 @@
     margin: 0;
     padding: 0;
 }
+html{
+	scroll-behavior: smooth;
+}
 /*colors*/
-:root{
+:root{/*root: todo el documento html*/
+	/*variable css*/
 	--color-txt: 				#000;
 	--color-tittle: 			#000;
 	--color-active: 			#009817;
+	--color-first:				#F9B506;
 }
-
+/*Se redifine el contenido de la variable al elemento y sus nodos hijos que se le aplique esta clase*/
 .txt-white{
 	--color-txt: 				#fff;
 	--color-tittle: 			#fff;
 }
 
 
+.btn-yellow{
+	--color-btn: 				#F9B506;
+	--color-btn-h:				#BF8B06;
+}
+
+
+.btn-green{
+	--color-btn: 				#00B02A;
+	--color-btn-h:				#006B1A;
+	--color-txt:				#fff;
+}
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Mali&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fresca&display=swap');	
+@import url('https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap');
+.font-mali{
+	--font-txt: 'Mali', cursive;
+}
+.font-flower{
+	--font-txt: 'Indie Flower', cursive;
+}
+.font-fresca{
+	--font-txt: 'Fresca', sans-serif;
+}
+.font-p-h{
+	--font-txt: 'Patrick Hand', cursive;
+}
 
 
 
 
+
+.block{
+	display: block;
+}
 /*Text*/
 h1,h2,h3,h4,h5,h6,h1 span, h2 span, h3 span,span{
 	color: var(--color-tittle);
 }
-p,a,span,li,h1,h2,h3,h4,h5,h6,h1 {
+p,a,span,li,h1,h2,h3,h4,h5,h6,h1,li {
 	font-family: var(--font-txt);
 }
 .bold{
@@ -46,10 +84,20 @@ p,a,i,span,li{
 }
 
 
-
-.center{
+/*Elemento centrado*/
+.center-x{
 	margin: 0 auto;
 }
+.center-y{
+	margin: auto 0;
+}
+.center{
+	margin:  auto;
+}
+.right{
+	margin-left: auto;
+}
+/*Elemento no mostrado*/
 .hidden{
     display: none;
 }
@@ -58,11 +106,11 @@ p,a,i,span,li{
     clear: both;
 }
 
-
+/*estilo de lista: ninguno*/
 .l-s-none{
 	list-style: none;
 }
-
+/*Centado de elemento dentro de otro elemento*/
 .abs-center,.center-abs{
 	position: absolute;
 	left: 50%;
@@ -70,7 +118,7 @@ p,a,i,span,li{
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%) 
 }
-
+/*Elemento en la aprte superior*/
 .abs-top{
 	position: absolute;
 	top: 20px;
@@ -87,12 +135,32 @@ p,a,i,span,li{
 	position: absolute;
 	left: 20px;
 }
-
-
+/*Diseño flexible*/
+.flex{
+	display: flex;
+}
+.flex-y{
+	display: flex;
+	flex-flow: column;
+}
 .flex-center{
 	display: flex;
 	justify-content: center;
 	align-items: center;	
 }
-
-
+.flex-end{
+	display: flex;
+	justify-content: flex-end;
+}
+.space-btw{
+	justify-content: space-between;
+}
+.space-around{
+	justify-content: space-around;
+}
+.space-evenly{
+	justify-content: space-evenly;
+}
+.relative{
+	position: relative;
+}

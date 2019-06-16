@@ -1,160 +1,438 @@
 /*Buttons*/
-.btn-circle {
-  display: inline-block;
-  padding: 15px;
-  background: red;
-  border-radius: 50%;
-  color: white;
-  color: var(--color-txt);
+
+.btn-up{
+    visibility: hidden;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #009817;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 1.4em;
+    color: #fff;
 }
+.btn-circle {
+    display: inline-block;
+    padding: 15px;
+    background: red;
+    border-radius: 50%;
+    color: white;
+    color: var(--color-txt);
+}
+
+.button-1 {
+    border: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: var(--color-btn);
+    color: var(--color-txt);
+    box-shadow: 0 10px 10px 0 #000;
+}
+
+.button-1:hover {
+    text-decoration: none;
+    background: var(--color-btn-h);
+    color: var(--color-txt);
+}
+
+
+/*social icons*/
+
+.social .list {
+    display: flex;
+}
+
+.social .list i {
+    font-size: 1.2em;
+    padding: 5px;
+    color: var(--color-icon);
+}
+
+
+/*Cards*/
+
+
+/* card-1 */
+
+._our-team {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+}
+
+._our-team .tittle {
+    text-shadow: 0 7px 7px 0 #000;
+}
+
+._our-team .tittle {
+    /*    3d */
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0px 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+._card {
+    padding: 1em;
+}
+
+._card ._head {
+    margin-bottom: 1em;
+}
+
+._card ._head img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+._card ._head ._person_d {
+    margin-left: 20px;
+}
+
+._card ._head ._person_d h3 {
+    margin: auto;
+}
+
+._card ._description .social ul {
+    justify-content: center;
+}
+
+
+/* card-2 */
+
+._card_2 img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+._card_2 .tittle {
+    font-size: 1.2em;
+}
+
+._card_2 {
+    border-radius: 20px;
+    width: 250px;
+}
+
+.recipes .recipe {
+    margin: 50px 50px;
+    min-width: 300px;
+}
+
+.recipes .recipe h3.tittle {
+    color: #006E1A;
+}
+
+@media(min-width: 750px) {
+    ._our-team {
+        grid-template-columns: 1fr 2fr;
+        text-align: initial;
+    }
+    ._our-team ._team {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    ._card ._head {
+        display: flex;
+    }
+    ._card ._head img {
+        width: 70px;
+        height: 70px;
+    }
+    ._card ._description .social ul {
+        justify-content: initial;
+    }
+}
+
 
 /*Headers*/
+
 header {
-  position: relative; 
-  margin-bottom: 2rem;
+    position: relative;
 }
+
 header .isotipo {
-  padding: 20px 0; 
-  font-size: 20px;
+    padding: 20px 0;
 }
-header .isotipo .tittle{
-  font-size: 20px;
+
+header .isotipo .tittle {
+    font-size: 20px;
 }
+
+header .navigation #menu-bars {
+    cursor: pointer;
+}
+header .navigation {
+    z-index: 100;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+}
+header .navigation #menu-bars i {
+    font-size: 30px;
+}
+
 header .navigation nav ul li a {
-  padding: 10px 20px;
-  display: block;
-  text-align: center; 
-}
-header nav{
-  display: none;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
 }
 
-header .carousel-pitahaya img{
-  height: 250px;
+header nav {
+    max-height: 0;
+    height: 0;
+    transition: 1s;
+    overflow: hidden;
 }
 
-header .carousel-pitahaya .carousel-caption{
-  position: absolute;
-  right: initial;
-  bottom: initial;
-  width: 80%;
-  left: 12%;
-  top: 40%;
-  text-align: left;
+header nav.active {
+    display: block;
+    transition: max-height 1s;
+    height: 8.5em;
+    max-height: 8.5em;
 }
 
-header .carousel-pitahaya .carousel-caption{
-  background-color: rgba(255,255,255,0.5);
-  border-radius: 10px;
-  padding: 10px;  
+header .carousel-pitahaya img {
+    height: 250px;
 }
 
-header .carousel-pitahaya .carousel-indicators li.active{
-  background-color:   var(--color-active);
+header .carousel-pitahaya .carousel-caption {
+    position: absolute;
+    right: initial;
+    bottom: initial;
+    width: 80%;
+    left: 12%;
+    top: 40%;
+    text-align: left;
 }
-#menu-bars{
-  display: inline-block;
+
+.carousel-pitahaya .carousel-caption {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.carousel-pitahaya .carousel-indicators li.active {
+    background-color: var(--color-active);
+}
+
+#menu-bars {
+    display: inline-block;
+}
+
+
+._s_product ._content .picture img {
+    width: 250px;
+    height: 210px;
+}
+
+._s_product ._content .picture> :nth-child(2) {
+    display: none;
+}
+
+._s_product ._content .picture:hover> :nth-child(1) {
+    display: none;
+}
+
+._s_product ._content .picture:hover> :nth-child(2) {
+    display: block;
+}
+main section.gallery-product #gallery{
+    
+}
+main section.gallery-product #gallery img{
+    max-height: 260px;
 }
 main section.gallery-product h2.tittle {
-  margin: 20px; 
+    /* margin: 20px; */
 }
 
-main section.gallery-product .cards {
-  background-image: url(../img/bck/bck-dark.jpg);
-  background-repeat: no-repeat;
-  overflow: hidden;
-  overflow-x: scroll;
-  display: flex; 
+main section.gallery-product #gallery {
+    
 }
+@media(min-width: 650px){
+    main section.gallery-product #gallery {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr) ;
+    }
+    main section.gallery-product{
+        display: grid;
+        grid-template-columns: 2fr 6fr;
+    }
+}
+@media(min-width: 750px){
+    
+    main section.gallery-product #gallery {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+    }
+}
+
+/* 
+main section.gallery-product #gallery {
+    position: relative;
+    background-image: url(../img/carousel/c2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    overflow-x: scroll;
+    display: flex;
+}
+main section.gallery-product #gallery::before{
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+} */
 main section.gallery-product .cards .card {
-  width: 280px;
-  min-width: 250px;
-  position: relative;
-  margin: 2em;
+    width: 280px;
+    min-width: 250px;
+    position: relative;
+    /* margin: 2em; */
 }
+
 main section.gallery-product .cards .card img {
-  width: 100%;
-  /*height: 100%; */
+    width: 100%;
 }
+
 main section.gallery-product .cards .card .description {
-  background: #fff;
-  padding: 10px;
-  border-radius: 20px; 
+    background: #fff;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 main section.review {
-  /*height: 100vh;*/
-  background-image: url(../img/bck/bck-3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; 
+    /*height: 100vh;*/
+    background-image: url(../img/bck/table.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 main section.review .container-review {
-  padding: 60px;
-  background-color: white;
-  width: 90%; 
+    padding: 60px;
+    background-color: white;
+    width: 90%;
 }
 
 main section.review .container-review img {
-  width: 100%; 
-  height: 220px;
-  border-radius: 50%;
+    width: 100%;
+    height: 220px;
+    border-radius: 15%;
 }
 
 main section.location .map {
-  padding: 60px;
-  background-color: white;
-  width: 90%; 
+    padding: 60px;
+    background-color: white;
+    width: 90%;
 }
+
 main section.location .map iframe {
-  width: 100%; 
+    width: 100%;
+}
+footer{
+    background-color: #1B1C1B;
+}
+footer .ft .ft_,
+footer .ft .ft_ ._head {
+    position: relative;
+    /*text-align: center;*/
 }
 
-@media (min-width: 750px) {
-  /*Headers*/
-  header .logo {
-    padding: 0; 
-  }
-  header .navigation {
-    margin: 2rem 0 1rem 0 ;
-    display: flex;
-    justify-content: space-between; 
-  }
-  main section.review .container-review .picture_review{
-    margin: 20px;
-  }
-  header .carousel-pitahaya .carousel-caption{
-    width: auto;
-  }
-  header .carousel-pitahaya .carousel-indicators li{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-  }
-  #menu-bars{
-    display: none;
-  }
-  header nav{
-    display: inline-block;
-  }
+footer .ft .ft_ {
+    padding: 25px;
+}
 
-  header .navigation nav ul {
-    display: flex; 
-  }
-  header .navigation nav ul a {
-    padding: 20px; 
-    /*display: block;*/
-  }
-  header .carousel-pitahaya img{
-    height: 460px;
-  }
-  main section.review {
-    height: 100vh; 
-  }
-  main section.review .container-review {
-    width: 80%;
-    display: flex; 
-  }
-  footer .ft {
-    display: inline-block; 
-  } 
+footer .ft .ft_ ._head {
+    padding-bottom: 10px;
+}
+
+footer .ft .ft_ ._body {
+    padding-top: 20px;
+}
+
+footer .ft .ft_ form input[type='submit'] {
+    display: block;
+    margin: auto;
+}
+
+footer .ft .ft_.social ul {
+    justify-content: center;
+}
+
+footer .ft ._head:before {
+    content: '';
+    width: 1.3em;
+    height: 0.2em;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: black;
+}
+
+@media (min-width: 780px) {
+    /*Headers*/
+
+    header .isotipo {
+        padding:0;
+    }
+    header .navigation {
+        margin: 0 2rem 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+    }
+    main section.review .container-review .picture_review {
+        margin: 20px;
+    }
+    header .carousel-pitahaya .carousel-caption {
+        width: auto;
+    }
+    header .carousel-pitahaya .carousel-indicators li {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+    }
+    #menu-bars {
+        display: none;
+    }
+    header nav {
+        display: inline-block;
+        max-height: initial;
+        height: initial;
+    }
+    header .navigation nav ul {
+        display: flex;
+    }
+    header .navigation nav ul a {
+        padding: 20px;
+        /*display: block;*/
+    }
+    header .carousel-pitahaya img {
+        height: 460px;
+    }
+
+    .recipes .recipe {
+        display: inline-block;
+    }
+
+
+    main section.review {
+        height: 100vh;
+    }
+
+
+    main section.review .container-review img{
+        width: 200px;
+    }
+    main section.review .container-review {
+        width: 80%;
+        display: flex;
+    }
+    footer .ft {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

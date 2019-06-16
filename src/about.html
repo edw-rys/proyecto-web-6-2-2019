@@ -4,41 +4,55 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width">
-	<title>Título</title>
+	<title>Noostros</title>
 	<!-- Styles -->
 	<!-- bootstrap cdn-->
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./assets/css/base.css">
 	<link rel="stylesheet" href="./assets/css/style.css">
 
-	<style type="text/css">
+	<style>
 		a{
 			text-decoration: none;
 		}
 		a:hover{
 			text-decoration: none;
 		}
+		.mision_and_vision{
+			background-image: url(assets/img/bck/gray.jpg);
+			/* background-repeat: no-repeat; */
+			background-repeat: repeat-x;
+			height: 100vh;
+		}
+		@media(min-width:750px){
+			.mision_and_vision ._body{
+				display: grid;
+				grid-template-columns: 1fr 1fr;/*2 columnas y tamñano 1fr*/
+				grid-gap: 20px;/*Espciado entre grids*/
+				width: 80%;
+			}	
+		}
 	</style>
 	<!-- Icons -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 
-	<!-- Scripts -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<div class="container-all">
 		<!-- header -->
-		<header class="container">
+		<header>
 			<div class="navigation">
-				<div class="isotipo flex-center"><h1 class="tittle"><a href="index.html">PITAISIERS GRIM FRUITS</a></h1></div>
-				<span id="menu-bars" class="hidden"><i class="fas fa-bars"></i></span>
-				<nav class="menu">
-					<ul class="l-s-none ">
+				<div class="flex space-btw">
+					<div class="isotipo flex-center"><h1 class="tittle"><a href="index.html">PITAISIERS GRIM FRUITS</a></h1>
+					</div>
+					<span id="menu-bars" class="hidden center-y" onclick="toggle('#menu','active')"><i class="fas fa-bars"></i></span>
+				</div>
+				
+				<nav id="menu" class="menu  font-p-h">
+					<ul class="l-s-none">
 						<li><a href="index.html">Inicio</a></li>
-						<li><a href="gallery.html">Galería de productos</a></li>
-						<li><a href="about.html">Acerca de</a></li>
+						<li><a href="about.html">¿Quiénes somos?</a></li>
+						<li><a href="gallery.html">Galería</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -46,66 +60,130 @@
 		</header>
 		<!-- main -->
 		<main>
-			<!-- <section class="section">
-				<h2 class="tittle">Checkpoints</h2>
-				<div class="cards">
-					<div class="card">
-						<img src="./assets/img/pictures/pitahaya.png" alt="">
-						<div class="description abs-botton abs-left">
-							<span>First</span>
-							<h3>Pitahaya</h3>
-						</div>
+			<section class="mision_and_vision space-evenly flex-y">
+				<h2 class="tittle txt-center">Nuestra misión y visión</h2>
+				<div class="_body" style="margin: 0 auto">
+					<div class="vision">
+						<h3>Visión</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, harum adipisci. Consequatur quasi quo magni consectetur distinctio nemo officiis velit ab repellendus, neque quia laborum rerum voluptatem ducimus ipsa voluptatum?</p>
 					</div>
-					<div class="card">
-						<img src="./assets/img/pictures/p2.jpg" alt="pitahaya"/>
-						<div class="description abs-botton abs-left">
-							<span>First</span>
-							<h3>Pitahaya</h3>
-						</div>
-					</div>
-					<div class="card">
-						<img src="./assets/img/pictures/p2.jpg" alt="">
-						<div class="description abs-botton abs-left">
-							<span>First</span>
-							<h3>Pitahaya</h3>
-						</div>
-					</div>
-					<div class="card">
-						<img src="./assets/img/pictures/pitahaya.png" alt="">
-						<div class="description abs-botton abs-left">
-							<span>First</span>
-							<h3>Pitahaya</h3>
-						</div>
-					</div>
-					<div class="card">
-						<img src="./assets/img/pictures/p2.jpg" alt="">
-						<div class="description abs-botton abs-left">
-							<span>First</span>
-							<h3>Pitahaya</h3>
-						</div>
+					<div class="vision">
+						<h3>Misión</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, harum adipisci. Consequatur quasi quo magni consectetur distinctio nemo officiis velit ab repellendus, neque quia laborum rerum voluptatem ducimus ipsa voluptatum?</p>
 					</div>
 				</div>
-			</section> -->
-			
+				
+				
+			</section>
+			<section class="_our-team">
+				<h2 class="tittle flex flex-center">Nuestro<br>Equipo</h2>
+				<div class="_team">
+					<div class="_card">
+						<div class="_head">
+							<img src="assets/img/persons/_c_f.jpg" alt="">
+							<div class="_person_d">
+								<h3>Grima Enedina Trelles</h3>
+								<span>FOUNDER</span>
+							</div>
+							
+						</div>
+						<div class="_description">
+							<div class="_paragraph">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat.</p>
+							</div>
+							<div class="social">
+								<ul class="l-s-none list">
+									<li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+									<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+					<div class="_card">
+						<div class="_head">
+							<img src="assets/img/persons/_c_f.jpg" alt="">
+							<div class="_person_d">
+								<h3>Robert Idrovo Trelles</h3>
+								<span>FOUNDER</span>
+							</div>
+							
+						</div>
+						<div class="_description">
+							<div class="_paragraph">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat.</p>
+							</div>
+							<div class="social">
+								<ul class="l-s-none list">
+									<li><a href="#!"><i class="fab fa-facebook-f"></i></a></li>
+									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+									<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
 		</main>
 		<!-- footer -->
-		<footer>
-			<div class="info ft">
-				<ul class="l-s-none">
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-				</ul>
+		<footer class="txt-white font-p-h">
+			<div class="ft container">
+				
+				<div class="info ft_">
+					<div class="_head">
+						<h2 class="tittle">Información</h2>
+					</div>
+					<div class="_body">
+						<ul class="l-s-none">
+							<li>Ecuador</li>
+							<li><a href="">Link</a></li>
+							<li><a href="">Link</a></li>
+							<li><a href="">Link</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="contact ft_">
+					<div class="_head"><h2 class="tittle">Enviar consulta</h2></div>
+					<div class="_body">
+						<form class="flex-y center" method="get" accept-charset="utf-8">
+							<input type="text" name="name" placeholder="Su nombre" required/>
+							<input type="email" name="email" placeholder="su email" required/>
+							<textarea name="query" id="query" cols="30" rows="4" placeholder="Escriba su mensaje."></textarea>
+							<input class="button-1 btn-green" type="submit">
+						</form>
+					</div>
+				</div>
+				<div class="ft_">
+					<div class="_head"><h2 class="tittle">Contacto</h2></div>
+					<div class="_body">
+						<ul class="l-s-none">
+							<li>Correo: <a href="mailto:tnte.idrovo@gmail.com">tnte.idrovo@gmail.com</a></li>
+							<li>Número de celular: +593 98 897 3098</li>
+						</ul>
+					</div>
+				</div>
 			</div>
-			<div class="social ft">
-				<ul class="l-s-none">
-					<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-					<li><i class="fab fa-instagram"></i></li>
-					<li><i class="fab fa-youtube"></i></li>
-				</ul>
-			</div>
+			
 		</footer>
+		<a href="#!" onclick="window.scrollTo(0,0);" class="btn-up"><i class="fas fa-chevron-up"></i></a>
 	</div>
+	<script src="assets/js/index.js"></script>
 </body>
 </html>
+
+<!-- <section class="location flex-center">
+		<div class="map">
+			<h2>Ubicación</h2>
+			<span class="locate"><i class="fas fa-map-marker-alt"></i> Localización</span>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31904.429576218714!2d-77.98203021338188!3d-1.7041314236086065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d3d66727868667%3A0xb568d82dcb6f76fb!2sParque+Central+Palora!5e0!3m2!1ses!2sec!4v1560131310496!5m2!1ses!2sec" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+		
+	</section> -->
